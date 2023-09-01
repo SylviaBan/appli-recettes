@@ -1,4 +1,4 @@
-package com.example.tdrevision.repository;
+package com.example.projet_sitecuisine_groupe2_20230901.repository;
 
 import java.util.List;
 

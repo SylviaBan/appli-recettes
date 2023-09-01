@@ -2,6 +2,7 @@ package com.example.projet_sitecuisine_groupe2_20230901.entity;
 
 import java.awt.*;
 
+
 public class User {
     private Integer id;
     private String name;
