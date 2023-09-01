@@ -13,7 +13,7 @@ import java.util.List;
 public class ListRecipesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RecipeRepository recipeRepo = new RecipeRepository(com.example.tdrevision.emf.ConnexionDb.getInstanceEmf());
+        RecipeRepository recipeRepo = new RecipeRepository(com.example.projet_sitecuisine_groupe2_20230901.emf.ConnexionDb.getInstanceEmf());
 
         List<Recipe> recipes = recipeRepo.findAll();
         request.setAttribute("recipes", recipes);

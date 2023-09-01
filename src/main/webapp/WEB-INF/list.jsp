@@ -31,7 +31,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${recipes}" var="game">
+                <c:forEach items="${recipes}" var="recipes">
                     <tr class="text-light">
                         <th>${recipes.getId()}</th>
                         <td class="text-light">${recipes.getName()}</td>
