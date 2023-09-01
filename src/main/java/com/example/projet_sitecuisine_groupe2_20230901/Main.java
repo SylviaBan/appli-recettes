@@ -28,7 +28,7 @@ public class Main {
         DatedRecipeRepository datRecipRepo;
         datRecipRepo = new DatedRecipeRepository(emf);
 
-        User u1= new User("Steeve","Lowenski");
+        User u1= new User("Steeve","Lowenski", "steeve.love@gmail.com", "blablabla");
         userRepo.create(u1);
 //
         Recipe rec1= new Recipe("dessert test","Tarte au pomme test","Dans un fond de tarte ajouter appareil et pommes fraichement coupés",u1);

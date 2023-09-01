@@ -39,6 +39,10 @@
                                 <input class="form-control" name="name" type="text">
                             </div>
                             <div class="col-12 my-2">
+                                <!--<label class="form-label" for="login">Login</label>-->
+                                <input class="form-control" name="email" type="email">
+                            </div>
+                            <div class="col-12 my-2">
                                 <!--<label class="form-label" for="password">Password</label>-->
                                 <input class="form-control" name="password" type="password">
                             </div>

@@ -1,8 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
-  <!-- 1. La nav barre => la barre de navigation-->
-  <nav class="navbar navbar-expand-md my-card-bg fixed-top">
-    <!-- 2. Container => pour y définir les div-->
+  <nav class="navbar navbar-expand-md my-card-bg fixed-top py-2">
     <div class="container fluid">
       <a class="navbar-brand" href="#">
         <i class="fas fa-utensils fa-3x me-3" style="color: #ffffff;"></i>

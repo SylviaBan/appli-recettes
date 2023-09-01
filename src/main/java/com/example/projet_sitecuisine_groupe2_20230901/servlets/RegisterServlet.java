@@ -16,7 +16,6 @@ public class RegisterServlet extends HttpServlet {
         // Affichage de la Vue jsp
         request.getRequestDispatcher("/WEB-INF/register.jsp")
                 .forward(request, response);
-
     }
 
     @Override
@@ -24,13 +23,14 @@ public class RegisterServlet extends HttpServlet {
         // Déclaration variables
         String firstname = request.getParameter("firstname");
         String name = request.getParameter("name");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
 
         // Connexion à la bdd
         UserRepository userRepo = new UserRepository(ConnexionDb.getInstanceEmf());
 
         try {
-            userRepo.create(new User(firstname, name, password));
+            userRepo.create(new User(firstname, name, email, password));
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("Error", "This account already exists.");
