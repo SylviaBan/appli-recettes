@@ -1,6 +1,7 @@
 package com.example.projet_sitecuisine_groupe2_20230901.repository;
 
 import com.example.projet_sitecuisine_groupe2_20230901.entity.Recipe;
+import com.example.projet_sitecuisine_groupe2_20230901.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,7 +24,7 @@ public class RecipeRepository extends EntityRepository <Recipe, Integer>{
             tx = em.getTransaction();
             tx.begin();
 
-            TypedQuery<Recipe> q = em.createQuery("SELECT r FROM Recipe WHERE r.name= :name", Recipe.class);
+            TypedQuery<Recipe> q = em.createQuery("SELECT u FROM User u WHERE u.name = :name", Recipe.class);
             q.setParameter("name", name);
 
             recipes = q.getResultList();

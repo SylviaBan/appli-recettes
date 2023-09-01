@@ -24,7 +24,7 @@ public class UserRepository extends EntityRepository <User,Integer>{
             tx = em.getTransaction();
             tx.begin();
 
-            TypedQuery<User> q = em.createQuery("SELECT u FROM User WHERE u.name= :name", User.class);
+            TypedQuery<User> q = em.createQuery("SELECT u FROM User u WHERE u.name = :name", User.class);
             q.setParameter("name", name);
 
             users = q.getResultList();
