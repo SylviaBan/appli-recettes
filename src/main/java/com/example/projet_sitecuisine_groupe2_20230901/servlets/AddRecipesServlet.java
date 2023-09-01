@@ -24,7 +24,7 @@ public class AddRecipesServlet extends HttpServlet {
         String recipe_ingredients = request.getParameter("recipe_ingredients");
 
         // Connexion à la bdd
-        RecipeRepository recipeRepo = new RecipeRepository(com.example.tdrevision.emf.ConnexionDb.getInstanceEmf());
+        RecipeRepository recipeRepo = new RecipeRepository(com.example.projet_sitecuisine_groupe2_20230901.emf.ConnexionDb.getInstanceEmf());
 
         try {
             recipeRepo.create(new Recipe(name, category, recipe_ingredients));

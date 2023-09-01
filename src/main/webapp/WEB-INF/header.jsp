@@ -32,7 +32,7 @@
             <a class="nav-link text-light" href="search">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="profil">Profile</a>
+            <a class="nav-link text-light" href="edit">Profile</a>
           </li>
           <li class="nav-item bg-danger rounded-3">
             <a class="nav-link text-light" href="logout">Logout</a>
