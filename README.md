@@ -2,9 +2,9 @@
 Réaliser une application web proposant les mêmes fonctionnalités que ci-dessus.
 
 # La Team :
-Nicolas Bourrasin - lead
-Steeve Lowenski
-Sylvia Bankowska
+* Nicolas Bourrasin - lead
+* Steeve Lowenski
+* Sylvia Bankowska
 
 # Contexte
 Le client a pour habitude de cuisiner matin, midi et soir. Seul bémol, il n'a jamais d'idée.
