@@ -14,7 +14,6 @@ public class User {
     @Column(name = "name")// Nom de la colonne dans la table
     private String name;
     @Column(name = "firstname")// Nom de la colonne dans la table
-
     private String firstname;
     @Column(name = "email", unique = true)
     private String email;
