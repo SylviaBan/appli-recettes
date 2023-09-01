@@ -2,7 +2,7 @@
 Réaliser une application web proposant les mêmes fonctionnalités que ci-dessus.
 
 # La Team :
-* Nicolas Bourrasin - lead
+* Nicolas Bourassin - lead
 * Steeve Lowenski
 * Sylvia Bankowska
 
