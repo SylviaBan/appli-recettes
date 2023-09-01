@@ -3,7 +3,6 @@ package com.example.projet_sitecuisine_groupe2_20230901.entity;
 import javax.persistence.*;
 import java.util.List;
 import com.example.projet_sitecuisine_groupe2_20230901.entity.DatedRecipe;
-import javafx.scene.image.Image;
 
 @Entity
 @Table(name="users")
@@ -16,7 +15,8 @@ public class User {
     @Column(name = "firstname")// Nom de la colonne dans la table
     private String firstname;
     @Column(name = "email", unique = true)
-    private String email;
+    private String email; // NOTE : email used as a username
+
     @Column(name = "photo")
     private String photo;
     @Column(name = "password")
@@ -36,7 +36,6 @@ public class User {
         this.cookedRecipe = cookedRecipe;
         this.myRecipe = myRecipe;
     }
-
 
     public User(String name, String firstname, String email, String photo, String password, List<DatedRecipe> cookedRecipe, List<Recipe> myRecipe) {
         this.name = name;
@@ -72,8 +71,6 @@ public class User {
     public String getEmail() {
         return email;
     }
-
-    public String getPhoto() {return photo;}
 
     public String getPassword() {
         return password;

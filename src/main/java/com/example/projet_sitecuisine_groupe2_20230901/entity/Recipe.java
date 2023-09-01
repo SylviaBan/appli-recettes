@@ -27,15 +27,15 @@ public class Recipe {
 
     public Recipe() {}
 
-    public Recipe(Integer id, String category, String name, String recipe_method, User user) {
-        this.id = id;
+    public Recipe(String category, String name, String recipe_method, User user) {
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
         this.user = user;
     }
 
-    public Recipe(String category, String name, String recipe_method, User user) {
+    public Recipe(Integer id, String category, String name, String recipe_method, User user) {
+        this.id = id;
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
