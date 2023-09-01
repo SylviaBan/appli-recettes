@@ -1,4 +1,4 @@
-package com.example.projet_sitecuisine_groupe2_20230901;
+package com.example.tdrevision;
 
 import java.io.*;
 import javax.servlet.http.*;
