@@ -19,7 +19,7 @@
             <a class="nav-link text-light" href="login">Login</a>
           </li>
           <li class="nav-item bg-warning rounded-3">
-            <a class="nav-link text-light" href="recipes">Recipes</a>
+            <a class="nav-link text-light" href="list">Recipes</a>
           </li>
         </ul>
       </div>
