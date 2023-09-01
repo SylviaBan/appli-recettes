@@ -1,11 +1,17 @@
 package com.example.projet_sitecuisine_groupe2_20230901.entity;
 
+import javax.persistence.*;
 import java.awt.*;
 
+@Entity
+@Table(name="users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String firstname;
+    @Column(unique = true)
     private String email;
     private Image photo;
     private String password;

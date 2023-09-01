@@ -1,8 +1,13 @@
 package com.example.projet_sitecuisine_groupe2_20230901.entity;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name="datedrecipes")
 public class DatedRecipe {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Recipe recipe;
     private LocalDate date;
