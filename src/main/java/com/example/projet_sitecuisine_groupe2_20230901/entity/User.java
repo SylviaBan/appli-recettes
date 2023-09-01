@@ -19,7 +19,7 @@ public class User {
     private String email; // NOTE : email used as a username
 
     @Column(name = "photo")
-    private Image photo;
+    private String photo;
     @Column(name = "password")
     private String password;
 
@@ -28,7 +28,7 @@ public class User {
     @OneToMany
     private List<DatedRecipe> cookedRecipe;
 
-    public User(Integer id, String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
+    public User(Integer id, String name, String firstname, String email, String photo, String password, List<DatedRecipe> cookedRecipe) {
         this.id = id;
         this.name = name;
         this.firstname = firstname;
@@ -38,7 +38,7 @@ public class User {
         this.cookedRecipe = cookedRecipe;
     }
 
-    public User(String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
+    public User(String name, String firstname, String email, String photo, String password, List<DatedRecipe> cookedRecipe) {
         this.name = name;
         this.firstname = firstname;
         this.email = email;
@@ -82,11 +82,11 @@ public class User {
         this.email = email;
     }
 
-    public Image getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Image photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 

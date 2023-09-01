@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Recipe {
 
     @Id// Clé primaire
-    @GeneratedValue(generator = "game_gen")
+    @GeneratedValue(generator = "recipe_gen")
     private Integer id;
 
     @Column(name = "category") // Nom de la colonne dans la table
@@ -27,14 +27,14 @@ public class Recipe {
 
     public Recipe() {}
 
-    public Recipe(String category, String name, String recipe_method, String user) {
+    public Recipe(String category, String name, String recipe_method, User user) {
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
         this.user = user;
     }
 
-    public Recipe(Integer id, String category, String name, String recipe_method, String user) {
+    public Recipe(Integer id, String category, String name, String recipe_method, User user) {
         this.id = id;
         this.category = category;
         this.name = name;
