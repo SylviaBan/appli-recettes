@@ -25,7 +25,7 @@ public class User {
 
 //    @OneToMany(mappedBy = "user")
 
-    @Column(name = "cookedRecipe")
+    @OneToMany
     private List<DatedRecipe> cookedRecipe;
 
     public User(Integer id, String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
