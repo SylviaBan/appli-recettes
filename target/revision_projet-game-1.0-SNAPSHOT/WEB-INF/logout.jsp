@@ -13,10 +13,17 @@
     <title>Home</title>
     <c:import url="head.jsp"></c:import>
 </head>
+<<<<<<< HEAD
 <body class="container bg-my-custom-bg">
 <c:import url="header.jsp"></c:import>
 <main>
     <section class="py-5">
+=======
+<body class="container">
+<c:import url="header.jsp"></c:import>
+<main>
+    <section class="py-5 bg-warning">
+>>>>>>> a6eeb3b4fe6d599d4890e9362e7ab297495dcad5
         <div class="container py-5">
             <h1 class="py-5">A bientôt !</h1>
         </div>

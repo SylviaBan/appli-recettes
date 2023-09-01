@@ -1,5 +1,6 @@
 package com.example.projet_sitecuisine_groupe2_20230901.servlets;
 
+import com.example.projet_sitecuisine_groupe2_20230901.emf.ConnexionDb;
 import com.example.projet_sitecuisine_groupe2_20230901.repository.RecipeRepository;
 import com.example.projet_sitecuisine_groupe2_20230901.entity.Recipe;
 
@@ -21,17 +22,17 @@ public class AddRecipesServlet extends HttpServlet {
         // Déclaration variables
         String name = request.getParameter("name");
         String category = request.getParameter("category");
-        String recipe_ingredients = request.getParameter("recipe_ingredients");
+        String recipe_method = request.getParameter("recipe_method");
 
         // Connexion à la bdd
-        RecipeRepository recipeRepo = new RecipeRepository(com.example.projet_sitecuisine_groupe2_20230901.emf.ConnexionDb.getInstanceEmf());
+        RecipeRepository recipeRepo = new RecipeRepository(ConnexionDb.getInstanceEmf());
 
         try {
-            recipeRepo.create(new Recipe(name, category, recipe_ingredients));
+            recipeRepo.create(new Recipe(name, category, recipe_method));
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("Error", "Recipe already exists.");
-            request.getRequestDispatcher("/WEB-INF/addGame.jsp");
+            request.getRequestDispatcher("/WEB-INF/addRecipe.jsp");
         }
 
         // Redirect

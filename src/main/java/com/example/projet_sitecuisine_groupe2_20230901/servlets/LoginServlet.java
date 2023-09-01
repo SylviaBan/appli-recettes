@@ -1,6 +1,6 @@
 package com.example.projet_sitecuisine_groupe2_20230901.servlets;
 
-import com.example.projet_sitecuisine_groupe2_20230901.Database;
+import com.example.projet_sitecuisine_groupe2_20230901.emf.ConnexionDb;
 import com.example.projet_sitecuisine_groupe2_20230901.entity.User;
 
 import javax.persistence.EntityManager;
@@ -18,7 +18,7 @@ import java.io.IOException;
 
 @WebServlet(name = "Login", value = "/login")
 public class LoginServlet extends HttpServlet {
-    EntityManagerFactory emf = Database.getInstanceEmf();
+    EntityManagerFactory emf = ConnexionDb.getInstanceEmf();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("firstname", "Boris");

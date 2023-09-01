@@ -32,6 +32,7 @@
                         <form action="register" method="post" class="row">
                             <div class="col-12 my-2">
                                 <!--<label class="form-label" for="login">Login</label>-->
+<<<<<<< HEAD
                                 <input class="form-control" name="firstname" type="text" value="John">
                             </div>
                             <div class="col-12 my-2">
@@ -45,6 +46,17 @@
                             <div class="col-12 my-2">
                                 <!--<label class="form-label" for="password">Password</label>-->
                                 <input class="form-control" name="password" type="password" value="********">
+=======
+                                <input class="form-control" name="firstname" type="text">
+                            </div>
+                            <div class="col-12 my-2">
+                                <!--<label class="form-label" for="login">Login</label>-->
+                                <input class="form-control" name="name" type="text">
+                            </div>
+                            <div class="col-12 my-2">
+                                <!--<label class="form-label" for="password">Password</label>-->
+                                <input class="form-control" name="password" type="password">
+>>>>>>> a6eeb3b4fe6d599d4890e9362e7ab297495dcad5
                             </div>
                             <div class="col-6 my-2">
                                 <button class="btn btn-primary w-100" type="submit">Register</button>
