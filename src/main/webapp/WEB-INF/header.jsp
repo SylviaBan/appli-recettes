@@ -7,10 +7,10 @@
       <a class="navbar-brand" href="#">
         <i class="fas fa-utensils fa-3x me-3" style="color: #ffffff;"></i>
       </a>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-start">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link text-light" href="home">Home</a>
+            <a class="nav-link bg-warning text-light" href="home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="register">Register</a>
@@ -18,8 +18,24 @@
           <li class="nav-item">
             <a class="nav-link text-light" href="login">Login</a>
           </li>
-          <li class="nav-item bg-warning rounded-3">
+          <li class="nav-item bg-primary rounded-3">
             <a class="nav-link text-light" href="list">Recipes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="add">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="search">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="profil">Profil</a>
+          </li>
+          <li class="nav-item bg-danger rounded-3">
+            <a class="nav-link text-light" href="logout">Logout</a>
           </li>
         </ul>
       </div>
