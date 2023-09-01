@@ -10,6 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column(name = "name")// Nom de la colonne dans la table
     private String name;
     @Column(name = "firstname")// Nom de la colonne dans la table
@@ -56,6 +57,13 @@ public class User {
     public User(String name, String firstname) {
         this.name = name;
         this.firstname = firstname;
+    }
+
+    public User(String name, String firstname, String email, String password) {
+        this.name = name;
+        this.firstname = firstname;
+        this.email = email;
+        this.password = password;
     }
 
     public User() {
