@@ -40,5 +40,8 @@ public class Main {
         DatedRecipe drec1 = new DatedRecipe(1, LocalDate.now());
         datRecipRepo.create(drec1);
 
+        userRepo.findByName("Steeve");
+        System.out.println(userRepo.findByName("Steeve"));
+
     }
 }
