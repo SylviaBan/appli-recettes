@@ -21,7 +21,8 @@ public class Recipe {
     private String recipe_method;
 
 
-    @Column(name = "author") // Nom de la colonne dans la table
+    @ManyToOne
+    @JoinColumn(name = "author_id") // Nom de la colonne dans la table
     private User user;
 
     public Recipe() {}

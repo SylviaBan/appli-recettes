@@ -22,6 +22,9 @@ public class User {
     private Image photo;
     @Column(name = "password")
     private String password;
+
+//    @OneToMany(mappedBy = "user")
+
     @Column(name = "cookedRecipe")
     private List<DatedRecipe> cookedRecipe;
 
