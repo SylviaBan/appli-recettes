@@ -20,24 +20,26 @@ public class Recipe {
     @Column(name = "recipe_method")// Nom de la colonne dans la table
     private String recipe_method;
 
-    @Column(name = "author") // Nom de la colonne dans la table
-    private String author;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id") // Nom de la colonne dans la table
+    private User user;
 
     public Recipe() {}
 
-    public Recipe(String category, String name, String recipe_method, String author) {
+    public Recipe(String category, String name, String recipe_method, String user) {
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
-        this.author = author;
+        this.user = user;
     }
 
-    public Recipe(Integer id, String category, String name, String recipe_method, String author) {
+    public Recipe(Integer id, String category, String name, String recipe_method, String user) {
         this.id = id;
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
-        this.author = author;
+        this.user = user;
     }
 
     public Integer getId() {
@@ -56,8 +58,8 @@ public class Recipe {
         return recipe_method;
     }
 
-    public String getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
     public void setCategory(String category) {
@@ -72,7 +74,7 @@ public class Recipe {
         this.recipe_method = recipe_method;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
