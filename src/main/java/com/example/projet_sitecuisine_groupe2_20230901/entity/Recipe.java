@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Recipe {
 
     @Id// Clé primaire
-    @GeneratedValue(generator = "game_gen")
+    @GeneratedValue(generator = "recipe_gen")
     private Integer id;
 
     @Column(name = "category") // Nom de la colonne dans la table
@@ -22,24 +22,30 @@ public class Recipe {
 
 
     @ManyToOne
-    @JoinColumn(name = "author_id") // Nom de la colonne dans la table
+    @JoinColumn(name = "author_id") // Nom de la colonne dans la table et cardinalité
     private User user;
 
     public Recipe() {}
 
-    public Recipe(String category, String name, String recipe_method, String user) {
+    public Recipe(Integer id, String category, String name, String recipe_method, User user) {
+        this.id = id;
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
         this.user = user;
     }
 
-    public Recipe(Integer id, String category, String name, String recipe_method, String user) {
-        this.id = id;
+    public Recipe(String category, String name, String recipe_method, User user) {
         this.category = category;
         this.name = name;
         this.recipe_method = recipe_method;
         this.user = user;
+    }
+
+    public Recipe(String category, String name, String recipe_method) {
+        this.category = category;
+        this.name = name;
+        this.recipe_method = recipe_method;
     }
 
     public Integer getId() {

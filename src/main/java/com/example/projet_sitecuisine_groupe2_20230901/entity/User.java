@@ -19,16 +19,15 @@ public class User {
     @Column(name = "email", unique = true)
     private String email;
     @Column(name = "photo")
-    private Image photo;
+    private String photo;
     @Column(name = "password")
     private String password;
-
-//    @OneToMany(mappedBy = "user")
-
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     private List<DatedRecipe> cookedRecipe;
+    @OneToMany(mappedBy = "user")
+    private List<Recipe> myRecipe;
 
-    public User(Integer id, String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
+    public User(Integer id, String name, String firstname, String email, String photo, String password, List<DatedRecipe> cookedRecipe, List<Recipe> myRecipe) {
         this.id = id;
         this.name = name;
         this.firstname = firstname;
@@ -36,15 +35,24 @@ public class User {
         this.photo = photo;
         this.password = password;
         this.cookedRecipe = cookedRecipe;
+        this.myRecipe = myRecipe;
     }
 
-    public User(String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
+
+    public User(String name, String firstname, String email, String photo, String password, List<DatedRecipe> cookedRecipe, List<Recipe> myRecipe) {
         this.name = name;
         this.firstname = firstname;
         this.email = email;
         this.photo = photo;
         this.password = password;
         this.cookedRecipe = cookedRecipe;
+        this.myRecipe = myRecipe;
+    }
+
+
+    public User(String name, String firstname) {
+        this.name = name;
+        this.firstname = firstname;
     }
 
     public User() {
@@ -54,55 +62,55 @@ public class User {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getFirstname() {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Image getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(Image photo) {
-        this.photo = photo;
-    }
+    public String getPhoto() {return photo;}
 
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public List<DatedRecipe> getCookedRecipe() {
         return cookedRecipe;
     }
 
+    public List<Recipe> getMyRecipe() {
+        return myRecipe;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoto(String photo) {this.photo = photo;}
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public void setCookedRecipe(List<DatedRecipe> cookedRecipe) {
         this.cookedRecipe = cookedRecipe;
+    }
+
+    public void setMyRecipe(List<Recipe> myRecipe) {
+        this.myRecipe = myRecipe;
     }
 }
