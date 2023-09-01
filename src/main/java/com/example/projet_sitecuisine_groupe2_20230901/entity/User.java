@@ -1,7 +1,9 @@
 package com.example.projet_sitecuisine_groupe2_20230901.entity;
 
 import javax.persistence.*;
-import java.awt.*;
+import java.util.List;
+import com.example.projet_sitecuisine_groupe2_20230901.entity.DatedRecipe
+import javafx.scene.image.Image;
 
 @Entity
 @Table(name="users")
@@ -9,12 +11,18 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "name")// Nom de la colonne dans la table
     private String name;
+    @Column(name = "firstname")// Nom de la colonne dans la table
+
     private String firstname;
-    @Column(unique = true)
+    @Column(name = "email", unique = true)
     private String email;
+    @Column(name = "photo")
     private Image photo;
+    @Column(name = "password")
     private String password;
+    @Column(name = "cookedRecipe")
     private List<DatedRecipe> cookedRecipe;
 
     public User(Integer id, String name, String firstname, String email, Image photo, String password, List<DatedRecipe> cookedRecipe) {
