@@ -19,14 +19,15 @@ public class AddRecipesServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Déclaration variables
-        String nom = request.getParameter("nom");
-        String description = request.getParameter("description");
+        String name = request.getParameter("name");
+        String category = request.getParameter("category");
+        String recipe_ingredients = request.getParameter("recipe_ingredients");
 
         // Connexion à la bdd
         RecipeRepository recipeRepo = new RecipeRepository(com.example.tdrevision.emf.ConnexionDb.getInstanceEmf());
 
         try {
-            recipeRepo.create(new Recipe());
+            recipeRepo.create(new Recipe(name, category, recipe_ingredients));
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("Error", "Recipe already exists.");
