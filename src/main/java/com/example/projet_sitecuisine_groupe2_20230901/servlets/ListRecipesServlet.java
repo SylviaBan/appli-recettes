@@ -18,11 +18,11 @@ public class ListRecipesServlet extends HttpServlet {
         List<Recipe> recipes = recipeRepo.findAll();
         request.setAttribute("recipes", recipes);
 
-        request.getRequestDispatcher("/WEB-INF/list.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/listRecipe.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/list.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/listRecipe.jsp").forward(request, response);
     }
 }

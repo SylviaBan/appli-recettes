@@ -47,6 +47,11 @@ public class User {
         this.myRecipe = myRecipe;
     }
 
+    public User(String name, String firstname, String password) {
+        this.name = name;
+        this.firstname = firstname;
+        this.password = password;
+    }
 
     public User(String name, String firstname) {
         this.name = name;
