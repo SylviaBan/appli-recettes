@@ -11,6 +11,7 @@
 <html>
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <title>Home</title>
   <c:import url="head.jsp"></c:import>
 </head>
@@ -21,6 +22,8 @@
     <div class="container py-5">
       <h1 class="py-5">Bienvenue dans votre app</h1>
 =======
+=======
+>>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
   <title>Login</title>
   <c:import url="head.jsp"></c:import>
 </head>
@@ -55,6 +58,9 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+>>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
+=======
 >>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
     </div>
   </section>

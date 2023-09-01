@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
   <!-- 1. La nav barre => la barre de navigation-->
@@ -9,6 +10,8 @@
         <i class="fas fa-utensils fa-3x me-3" style="color: #ffffff;"></i>
       </a>
 =======
+=======
+>>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
 <%--
   Created by IntelliJ IDEA.
   User: sylwia
@@ -24,6 +27,9 @@
         <i class="fas fa-gamepad fa-3x me-3" style="color: #ffffff;"></i>
       </a>
 
+<<<<<<< HEAD
+>>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
+=======
 >>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
@@ -38,7 +44,11 @@
           </li>
           <li class="nav-item bg-warning rounded-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a class="nav-link text-light" href="list">Recipes</a>
+=======
+            <a class="nav-link text-light" href="recipes">Recipes</a>
+>>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
 =======
             <a class="nav-link text-light" href="recipes">Recipes</a>
 >>>>>>> cda2bc956a4f4469888cb245ce1d5f9c93b65799
