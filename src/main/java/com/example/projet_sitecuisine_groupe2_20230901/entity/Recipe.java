@@ -20,6 +20,7 @@ public class Recipe {
     @Column(name = "recipe_method")// Nom de la colonne dans la table
     private String recipe_method;
 
+
     @Column(name = "author") // Nom de la colonne dans la table
     private User user;
 
