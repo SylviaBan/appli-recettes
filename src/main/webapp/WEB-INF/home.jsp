@@ -31,7 +31,7 @@
             <form action="login" method="post" class="row">
               <div class="col-12 my-2">
                 <!--<label class="form-label" for="login">Login</label>-->
-                <input class="form-control" id="login" name="login" type="text">
+                <input class="form-control" id="email" name="email" type="text">
               </div>
               <div class="col-12 my-2">
                 <!--<label class="form-label" for="password">Password</label>-->
