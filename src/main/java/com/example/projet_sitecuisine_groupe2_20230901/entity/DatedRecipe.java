@@ -14,16 +14,23 @@ public class DatedRecipe {
     @Column(name = "date")
     private LocalDate date;
 
-    public DatedRecipe(Integer id, Integer recipe, LocalDate date) {
+    @ManyToOne
+    @JoinColumn(name = "userid")
+    private User user;
+
+    public DatedRecipe(Integer id, Integer recipe, LocalDate date, User user) {
         this.id = id;
         this.recipe = recipe;
         this.date = date;
+        this.user = user;
     }
+
 
     public DatedRecipe(Integer recipe, LocalDate date) {
         this.recipe = recipe;
         this.date = date;
     }
+
 
     public DatedRecipe() {
     }
@@ -32,23 +39,27 @@ public class DatedRecipe {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public Integer getRecipe() {
         return recipe;
-    }
-
-    public void setRecipe(Integer recipe) {
-        this.recipe = recipe;
     }
 
     public LocalDate getDate() {
         return date;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setRecipe(Integer recipe) {
+        this.recipe = recipe;
+    }
+
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

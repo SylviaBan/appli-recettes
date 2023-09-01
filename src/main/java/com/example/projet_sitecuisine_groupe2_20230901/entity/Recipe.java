@@ -22,7 +22,7 @@ public class Recipe {
 
 
     @ManyToOne
-    @JoinColumn(name = "author_id") // Nom de la colonne dans la table
+    @JoinColumn(name = "author_id") // Nom de la colonne dans la table et cardinalité
     private User user;
 
     public Recipe() {}
@@ -40,6 +40,12 @@ public class Recipe {
         this.name = name;
         this.recipe_method = recipe_method;
         this.user = user;
+    }
+
+    public Recipe(String category, String name, String recipe_method) {
+        this.category = category;
+        this.name = name;
+        this.recipe_method = recipe_method;
     }
 
     public Integer getId() {
