@@ -14,7 +14,7 @@ public class Recipe {
     @Column(name = "category") // Nom de la colonne dans la table
     private String category;
 
-    @Column(name = "name")// Nom de la colonne dans la table
+    @Column(name = "name", unique = true)// Nom de la colonne dans la table
     private String name;
 
     @Column(name = "recipe_method")// Nom de la colonne dans la table
